@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Surprise</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Greeting Page -->
+  <div class="greeting-page" id="greetingPage">
+    <h1>Welcome to the Christmas Surprise!</h1>
+    <p>Enter your name to begin the celebration:</p>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button id="startBtn">Start Celebration</button>
+  </div>
+
+  <!-- Celebration Page -->
+  <div class="celebration-page" id="celebrationPage" style="display: none;">
+    <div class="christmas-tree">
+      <div class="star"></div>
+      <div class="branch branch1"></div>
+      <div class="branch branch2"></div>
+      <div class="branch branch3"></div>
+      <div class="branch branch4"></div>
+      <div class="branch branch5"></div>
+      <div class="trunk"></div>
+    </div>
+    <div class="message">
+      <h1 id="message">Merry Christmas!</h1>
+      <p>Wishing you a season filled with love, joy, and surprises!</p>
+    </div>
+    <button id="surpriseBtn">Click for a Surprise</button>
+    <div class="gift" id="giftBox" style="display: none;">
+      <h2>🎁 Surprise for <span id="userName"></span>! 🎉</h2>
+      <p>Enjoy your special Christmas surprise!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

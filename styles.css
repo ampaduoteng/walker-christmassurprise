@@ -1,0 +1,177 @@
+/* Background Animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+/* Snowflake Effect */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 20px;
+  color: white;
+  animation: snowfall 10s linear infinite;
+}
+
+.snowflake:nth-child(odd) {
+  animation-duration: 12s;
+}
+
+.snowflake:nth-child(even) {
+  animation-duration: 15s;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2d6a4f;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-image: url('https://www.w3schools.com/w3images/forest.jpg'); /* Add a nature-themed background */
+  background-size: cover;
+  background-position: center;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: #FF6F61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FF5733;
+}
+
+.greeting-page, .celebration-page {
+  text-align: center;
+  z-index: 1;
+}
+
+.greeting-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.christmas-tree {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.branch {
+  width: 100%;
+  height: 40px;
+  background-color: green;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.branch1 { top: 10px; width: 120%; }
+.branch2 { top: 40px; width: 100%; }
+.branch3 { top: 70px; width: 80%; }
+.branch4 { top: 100px; width: 60%; }
+.branch5 { top: 130px; width: 40%; }
+
+.trunk {
+  width: 40px;
+  height: 30px;
+  background-color: #7a4f3e;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.message h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.message p {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.gift {
+  display: none;
+  background-color: #f1c40f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#surpriseBtn {
+  padding: 10px 20px;
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#surpriseBtn:hover {
+  background-color: #6c3483;
+}
+
+/* Snowflakes */
+.snowflake {
+  animation: snowfall 15s linear infinite;
+  top: -10px;
+  left: calc(100% * random());
+  font-size: 24px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .christmas-tree {
+    width: 120px;
+    height: 150px;
+  }
+
+  .message h1 {
+    font-size: 2em;
+  }
+
+  .message p {
+    font-size: 1.2em;
+  }
+}
